@@ -1,0 +1,28 @@
+<DOCTYPE html>
+<html>
+<body>
+<form id="nameForm">
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="Enter your name" />
+    <p id="hello"></p>
+</form>
+<script>
+    var greeting = "Hello";
+    var nameForm = document.querySelector('#nameForm');
+    var nameInput = nameForm.name;
+    var message = document.querySelector('#hello');
+
+    document.addEventListener('DOMContentLoaded', function(loadEvent) {
+        nameInput.addEventListener('input', function(inputEvent) {
+            var name = nameInput.value;
+
+            if (nameValue) {
+                message.innerHTML = greeting + ' ' + name;
+            } else {
+                message.innerHTML = "";
+            }
+        });
+    });
+</script>
+</body>
+</html>
