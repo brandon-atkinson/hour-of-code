@@ -1,13 +1,11 @@
 #!/usr/bin/env groovy
 
-import static java.lang.System.*
-
 alphabet = 'a'..'z'
 alphabetSize = alphabet.size() as Integer
 halfAlphabetSize = (int) alphabetSize / 2
 
-in.withReader { reader -> 
-    out.withWriter { writer -> 
+System.in.withReader { reader -> 
+    System.out.withWriter { writer -> 
         reader.transformChar(writer) { character ->
             def transformed = character
             int offset = alphabet.indexOf(character.toLowerCase())
