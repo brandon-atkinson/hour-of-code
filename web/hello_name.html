@@ -1,10 +1,14 @@
 <DOCTYPE html>
 <html>
+<head>
+<style>
+</style>
+</head>
 <body>
 <form id="nameForm">
     <label for="name">Name</label>
     <input type="text" name="name" placeholder="Enter your name" />
-    <p id="hello"></p>
+    <p id="helloName"></p>
 </form>
 <script>
     var greeting = "Hello";
@@ -16,7 +20,7 @@
         nameInput.addEventListener('input', function(inputEvent) {
             var name = nameInput.value;
 
-            if (nameValue) {
+            if (name) {
                 message.innerHTML = greeting + ' ' + name;
             } else {
                 message.innerHTML = "";
